@@ -1,6 +1,246 @@
-body {
-  font-family: sans-serif;
-  background-color: #fcf8f2;
+:root {
+  --roxo-principal: #7c5cfc;
+  --roxo-claro: #f1edfe;
+  --laranja-botao: #ffb366;
+  --fundo-pagina: #fdfbf7;
+  --texto-escuro: #333333;
+  --texto-suave: #666666;
+  --fonte: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
+  font-family: var(--fonte);
+  background-color: var(--fundo-pagina);
+  color: var(--texto-escuro);
+}
+
+/* Header & Progresso */
+.header-principal {
+  background-color: var(--roxo-principal);
+  color: white;
+}
+
+.container-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.logo-imagem {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+.logo-texto {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ffeb99;
+}
+
+.logo-texto span {
+  color: white;
+}
+
+.icone-carrinho-header {
+  position: relative;
+  font-size: 1.5rem;
+}
+
+.badge-quantidade {
+  position: absolute;
+  top: -5px;
+  right: -8px;
+  background-color: var(--laranja-botao);
+  color: var(--texto-escuro);
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+
+.barra-progresso {
+  background-color: #ffffff;
+  padding: 0.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--texto-suave);
+  border-bottom: 1px solid #eee;
+}
+
+.barra-progresso .etapa.ativa {
+  font-weight: bold;
+  color: var(--texto-escuro);
+}
+
+/* Layout Principal (Mobile-First) */
+.container-carrinho {
+  padding: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.titulo-secao h1 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.titulo-secao p {
+  font-size: 0.9rem;
+  color: var(--texto-suave);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Cards de Produtos */
+.lista-produtos {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card-produto {
+  background-color: var(--roxo-claro);
+  border-radius: 12px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+
+.imagem-produto {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  object-fit: cover;
+  background-color: #fff;
+}
+
+.detalhes-produto {
+  flex: 1;
+}
+
+.nome-produto {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.preco-unitario {
+  font-size: 0.85rem;
+  color: var(--texto-suave);
+}
+
+.controles-quantidade {
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--laranja-botao);
+  border-radius: 8px;
+  margin: 0.5rem 0;
+  padding: 2px 8px;
+  gap: 10px;
+}
+
+.controles-quantidade button {
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.subtotal-item {
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.btn-remover {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  opacity: 0.6;
+}
+
+/* Resumo da Compra */
+.resumo-box {
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.resumo-box h2 {
+  font-size: 1.3rem;
+}
+
+.linha-resumo {
+  display: flex;
+  justify-content: space-between;
+  color: var(--texto-suave);
+}
+
+.linha-resumo.total {
+  color: var(--texto-escuro);
+  font-size: 1.1rem;
+}
+
+.frete-gratis {
+  color: var(--texto-suave);
+}
+
+.btn-continuar {
+  display: block;
+  width: 100%;
+  background-color: var(--laranja-botao);
+  color: var(--texto-escuro);
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 0.85rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Layout Responsivo para Desktop */
+@media (min-width: 768px) {
+  .container-carrinho {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .secao-produtos {
+    flex: 2;
+  }
+
+  .secao-resumo {
+    flex: 1;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+  }
+
+  .titulo-secao h1,
+  .titulo-secao p {
+    text-align: left;
+  }
 }
