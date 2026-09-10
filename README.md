@@ -128,6 +128,22 @@ O usuário é redirecionado para a tela de Sucesso ("Compra Aprovada!") ou Falha
 
 ---
 
+## Organização Kanban
+
+O projeto foi organizado utilizando a metodologia Kanban através do Trello.
+
+As tarefas foram separadas nas colunas:
+
+- Backlog
+- A fazer
+- Em andamento
+- Concluído
+
+Link do quadro Kaban:
+https://trello.com/b/xfOOOYPZ/mimopet
+
+---
+
 ## Controle de Versão
 
 O repositório foi organizado utilizando Git e GitHub, seguindo a estratégia de branches:
