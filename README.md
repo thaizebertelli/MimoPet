@@ -97,7 +97,7 @@ mimopet/
    git clone [https://github.com/thaizebertelli/MimoPet.git](https://github.com/thaizebertelli/MimoPet.git)
 
    1. Acesse a pasta da aplicação:
-   cd MimoPet/mimopet
+   cd mimopet
 
    2.Instale as dependências:
    npm install
@@ -126,6 +126,22 @@ Cartões com 16 dígitos idênticos são identificados como fraude.
 O sistema exibe um estado visual de processamento (spinner).
 
 O usuário é redirecionado para a tela de Sucesso ("Compra Aprovada!") ou Falha ("tentativa de golpe").
+
+---
+
+## Organização Kanban
+
+O projeto foi organizado utilizando a metodologia Kanban através do Trello.
+
+As tarefas foram separadas nas colunas:
+
+- Backlog
+- A fazer
+- Em andamento
+- Concluído
+
+Link do quadro Kaban:
+https://trello.com/b/xfOOOYPZ/mimopet
 
 ---
 
