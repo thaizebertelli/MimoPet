@@ -54,6 +54,7 @@ O objetivo foi construir uma SPA (Single Page Application) responsiva, aplicando
 
 ## Estrutura do Projeto
 
+```text
 mimopet/
 │
 ├── index.html
@@ -62,31 +63,31 @@ mimopet/
 ├── README.md
 │
 └── src/
-├── assets/
-│   ├── img/
-│   └── styles/
-│       └── index.css
-│
-├── components/
-│   ├── Header.jsx
-│   ├── ItemCarrinho.jsx
-│   └── ResumoCompra.jsx
-│
-├── data/
-│   └── produtos.js
-│
-├── hooks/
-│   └── usePagamento.js
-│
-├── pages/
-│   ├── Carrinho.jsx
-│   ├── Pagamento.jsx
-│   ├── Sucesso.jsx
-│   └── Falha.jsx
-│
-├── App.jsx
-└── main.jsx
-
+    ├── assets/
+    │   ├── img/
+    │   └── styles/
+    │       └── index.css
+    │
+    ├── components/
+    │   ├── Header.jsx
+    │   ├── ItemCarrinho.jsx
+    │   └── ResumoCompra.jsx
+    │
+    ├── data/
+    │   └── produtos.js
+    │
+    ├── hooks/
+    │   └── usePagamento.js
+    │
+    ├── pages/
+    │   ├── Carrinho.jsx
+    │   ├── Pagamento.jsx
+    │   ├── Sucesso.jsx
+    │   └── Falha.jsx
+    │
+    ├── App.jsx
+    └── main.jsx
+```
 ---
 
 ## Como Executar o Projeto Localmente
