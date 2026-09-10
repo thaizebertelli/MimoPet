@@ -363,3 +363,62 @@ body {
     text-align: left;
   }
 }
+
+
+
+/* Layout das Telas de Conclusão (Sucesso / Falha) */
+.container-resultado {
+  max-width: 450px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.icone-resultado {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.icone-resultado.sucesso {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.icone-resultado.sucesso svg {
+  width: 70px;
+  height: 70px;
+}
+
+.icone-resultado.falha {
+  background-color: transparent;
+  color: #E55353;
+}
+
+.icone-resultado.falha svg {
+  width: 150px;
+  height: 150px;
+  fill: #E55353;
+  stroke: white;
+}
+
+.titulo-resultado {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--texto-escuro);
+  margin-bottom: 0.75rem;
+}
+
+.texto-resultado {
+  font-size: 0.95rem;
+  color: var(--texto-suave);
+  line-height: 1.4;
+  margin-bottom: 3rem;
+}
