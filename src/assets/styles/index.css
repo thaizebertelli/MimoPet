@@ -1,10 +1,13 @@
 :root {
-  --roxo-principal: #7c5cfc;
-  --roxo-claro: #f1edfe;
-  --laranja-botao: #ffb366;
+  --roxo-principal: #7C5CFC;
+  --fundo-card: #F1EBF6;
+  --laranja-botao: #FFB86C;
   --fundo-pagina: #fdfbf7;
-  --texto-escuro: #333333;
-  --texto-suave: #666666;
+  --texto-escuro: #292929;
+  --texto-suave: #777777;
+  --verde-principal: #4CAF50;
+  --vermelho-principal: #D9534F;
+  --laranja-hover: #ffa033;
   --fonte: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -56,12 +59,18 @@ body {
   font-size: 1.5rem;
 }
 
+.icone-sacola {
+  width: 28px;
+  height: 28px;
+  display: block;
+}
+
 .badge-quantidade {
   position: absolute;
   top: -5px;
   right: -8px;
   background-color: var(--laranja-botao);
-  color: var(--texto-escuro);
+  color: var(--roxo-principal);
   font-size: 0.75rem;
   font-weight: bold;
   padding: 2px 6px;
@@ -115,7 +124,7 @@ body {
 }
 
 .card-produto {
-  background-color: var(--roxo-claro);
+  background-color: var(--fundo-card);
   border-radius: 12px;
   padding: 1rem;
   display: flex;
@@ -125,8 +134,8 @@ body {
 }
 
 .imagem-produto {
-  width: 80px;
-  height: 80px;
+  width: 120px;
+  height: 120px;
   border-radius: 8px;
   object-fit: cover;
   background-color: #fff;
@@ -146,22 +155,37 @@ body {
   color: var(--texto-suave);
 }
 
-.controles-quantidade {
+.controles-quantidade { 
   display: inline-flex;
   align-items: center;
   background-color: var(--laranja-botao);
   border-radius: 8px;
   margin: 0.5rem 0;
-  padding: 2px 8px;
-  gap: 10px;
+  padding: 8px 10px;
+  gap: 24px;
+}
+
+.numero-quantidade {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--texto-escuro);
 }
 
 .controles-quantidade button {
   background: none;
   border: none;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icone-qtd {
+  width: 14px;
+  height: 14px;
+  display: block;
 }
 
 .subtotal-item {
@@ -173,8 +197,18 @@ body {
   background: none;
   border: none;
   cursor: pointer;
-  font-size: 1.2rem;
-  opacity: 0.6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  color: var(--texto-suave);
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.icone-lixeira {
+  width: 24px;
+  height: 24px;
+  display: block;
 }
 
 /* Resumo da Compra */
@@ -205,6 +239,15 @@ body {
 }
 
 .btn-continuar {
+
+  /* Reseta os estilos nativos do navegador */
+  appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  outline: none;
+  box-shadow: none;
+
+  /* Estilos personalizados */
   display: block;
   width: 100%;
   background-color: var(--laranja-botao);
@@ -216,7 +259,10 @@ body {
   padding: 0.85rem;
   border-radius: 8px;
   margin-top: 1rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.btn-continuar:hover {
+  background-color: var(--laranja-hover);
 }
 
 /* Layout Responsivo para Desktop */
@@ -279,13 +325,24 @@ body {
 }
 
 .campo-linha label {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
   font-size: 0.9rem;
   font-weight: 600;
 }
 
 .icone-info {
-  font-size: 0.85rem;
+  display: inline-flex;
+  align-items: center;
   color: var(--texto-suave);
+  cursor: help;
+}
+
+.icone-info-img {
+  width: 14px;
+  height: 14px;
+  display: inline-block;
 }
 
 .campo-linha input {
@@ -295,10 +352,6 @@ body {
   padding: 0.4rem 0;
   font-size: 0.95rem;
   outline: none;
-}
-
-.campo-linha input::placeholder {
-  color: #aaa;
 }
 
 .linha-dupla-cartao {
@@ -311,14 +364,14 @@ body {
 }
 
 .erro-texto {
-  color: #d9381e;
+  color: var(--vermelho-principal);
   font-size: 0.8rem;
   margin-top: 2px;
 }
 
 /* Card de Carregamento / Processando */
 .card-processando {
-  background-color: var(--roxo-claro);
+  background-color: var(--fundo-card);
   border-radius: 12px;
   padding: 1.2rem;
   text-align: center;
@@ -387,26 +440,16 @@ body {
   margin-bottom: 2rem;
 }
 
-.icone-resultado.sucesso {
-  background-color: #4CAF50;
-  color: white;
+.icone-sucesso-img {
+  width: 140px;
+  height: 140px;
+  display: block;
 }
 
-.icone-resultado.sucesso svg {
-  width: 70px;
-  height: 70px;
-}
-
-.icone-resultado.falha {
-  background-color: transparent;
-  color: #E55353;
-}
-
-.icone-resultado.falha svg {
-  width: 150px;
-  height: 150px;
-  fill: #E55353;
-  stroke: white;
+.icone-falha-img {
+  width: 140px;
+  height: 140px;
+  display: block;
 }
 
 .titulo-resultado {
