@@ -53,6 +53,7 @@ O objetivo foi construir uma SPA (Single Page Application) responsiva, aplicando
 ---
 
 ## Estrutura do Projeto
+
 mimopet/
 │
 ├── index.html
@@ -95,7 +96,7 @@ mimopet/
    git clone [https://github.com/thaizebertelli/MimoPet.git](https://github.com/thaizebertelli/MimoPet.git)
 
    1. Acesse a pasta da aplicação:
-   cd MimoPet/mimopet
+   cd mimopet
 
    2.Instale as dependências:
    npm install
